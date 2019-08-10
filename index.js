@@ -28,8 +28,8 @@ class Route {
       '5th Avenue'
     ];
     const blocksGoingEastOrWest = Math.abs(eastWest.indexOf(start.horizontal) - eastWest.indexOf(end.horizontal))
-    const blocksGoingNorthOrSouth
-
+    const blocksGoingNorthOrSouth = Math.abs(Integer.parseInt(start.vertical) - Integer.parseInt(end.vertical));
+    return blocksGoingEastOrWest + blocksGoingNorthOrSouth;
   }
 
 
