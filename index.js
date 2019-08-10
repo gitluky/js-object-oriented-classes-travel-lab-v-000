@@ -27,10 +27,17 @@ class Route {
       'Madison Avenue',
       '5th Avenue'
     ];
-    const blocksGoingEastOrWest = Math.abs(eastWest.indexOf(this.start.horizontal) - eastWest.indexOf(this.end.horizontal))
+    const blocksGoingEastOrWest = Math.abs(eastWest.indexOf(this.start.horizontal) - eastWest.indexOf(this.end.horizontal));
     const blocksGoingNorthOrSouth = Math.abs(parseInt(this.start.vertical) - parseInt(this.end.vertical));
     return blocksGoingEastOrWest + blocksGoingNorthOrSouth;
   }
 
+  estimatedTime (peak = false) {
+    if (peak === true) {
+      return blocksTravelled() * 2;
+    } else {
+      return blocksTravelled() * 3;
+    }
+  }
 
 }
