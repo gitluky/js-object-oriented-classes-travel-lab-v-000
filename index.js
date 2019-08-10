@@ -17,7 +17,7 @@ class Route {
     this.end = end;
   }
 
-  blocksTravelled (start, end) {
+  blocksTravelled () {
     let eastWest = [
       '1st Avenue',
       '2nd Avenue',
@@ -27,8 +27,8 @@ class Route {
       'Madison Avenue',
       '5th Avenue'
     ];
-    const blocksGoingEastOrWest = Math.abs(eastWest.indexOf(start.horizontal) - eastWest.indexOf(end.horizontal))
-    const blocksGoingNorthOrSouth = Math.abs(Integer.parseInt(start.vertical) - Integer.parseInt(end.vertical));
+    const blocksGoingEastOrWest = Math.abs(eastWest.indexOf(this.start.horizontal) - eastWest.indexOf(this.end.horizontal))
+    const blocksGoingNorthOrSouth = Math.abs(Integer.parseInt(this.start.vertical) - Integer.parseInt(this.end.vertical));
     return blocksGoingEastOrWest + blocksGoingNorthOrSouth;
   }
 
