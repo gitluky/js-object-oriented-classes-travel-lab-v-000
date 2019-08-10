@@ -8,8 +8,9 @@ class Driver {
     return newDate(this.joinDate)
   }
 
-  yearsExperienceFromBeginningOf () {
-    
+  yearsExperienceFromBeginningOf (year) {
+    const dateYear = new Date(year)
+    return Math.abs(startDate() - dateYear);
   }
 
 }
